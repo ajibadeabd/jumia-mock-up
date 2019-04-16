@@ -1,0 +1,93 @@
+.row{width: 100%;
+display:flex;}
+.col-1{width:18.33;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66;}
+.col-6{width:50%;}
+.col-7{width:58.333%;}
+.col-8{width:66.66;}
+.col-9{width:75%;}
+.col-10{width:83.333%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+#header{
+    background-color: rgb(216, 200, 200);
+}
+#fCart{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#header{
+    margin:10px 10px 10px 0px;
+}
+#fCartlist{
+height: 290px;
+margin: 10px 10px 40px 10px;
+background-color: rgb(250, 248, 245);
+text-align: center;
+}
+#fCartgroup{
+
+}
+#jumia{
+    font-family: cursive;
+    font-style: initial;
+    font-size:50px;
+    color:rgb(212, 111, 28);
+    padding: 10px 10px 10px 10px;
+}
+img{
+    height: 150px;
+    width:90px;
+    padding:10px ;
+}
+#deal{
+background-color:green;
+font-variant-ligatures: common-ligatures;
+height:50px;
+padding:10px 10px 10px 10px;
+}
+#prize{
+    color:black;
+    height: 20px;
+    width: 40%;
+    position:center;
+    margin-left: 40%;
+    background: rgb(229, 233, 18);
+}
+.cart{
+    background: rgb(196, 93, 24);
+    color:black;
+    height: 20px;
+    width: 40%;
+    position:center;
+    margin-left: 40%;
+}
+#seell{
+    text-align: center;
+/* height: 20px; */
+}
+#dealday{
+    color:white;
+    font-size:35px;
+    padding:0px 10px 10px 10px;
+
+}
+.bar{
+    background-color: black;
+    margin:10px 10px 10px 10px;
+    width: 35px;
+    height: 4px;
+    display:none;
+}
+.days, .hours, .minutes, .seconds{
+    height: 20px;
+    margin: 2px 10px 2px 2px;
+    background: rgb(151, 161, 151);
+    border-radius: 33px;
+    position: relative;
+    padding:4px 4px 4px 4px;
+}
