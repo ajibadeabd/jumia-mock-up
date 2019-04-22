@@ -28,6 +28,11 @@ app.get('/',(req,res,next)=>{
 
 
 
+app.get('/cart',(req,res,next)=>{
+    res.render('cart')
+})
+
+
 
 let port =5000;
 

@@ -1,4 +1,4 @@
- let timer =()=>{
+let timer =()=>{
 let countDown=new Date('may 5,2019 15:37:25');
 // get todays and time
 let d=new Date();
@@ -31,33 +31,59 @@ document.getElementsByClassName('hours')[i].innerHTML=hours
 
 
 
-//      //Getting items
-// for(getCart=0; getCart<document.getElementsByClassName('cart').length;getCart++){
-// document.getElementsByClassName('cart')[getCart].onclick = getCarts =()=>{
-//     console.log('welldone');
-//     for(me=0;me<document.getElementsByClassName('booked').length;me++){
-// document.getElementsByClassName('booked')[me].innerText='booked'}
-// }
-// }
+  
 
-//function for all sixteen items
-let book=buk=(okay)=>{
-    for(me=0;me<document.getElementsByClassName('booked').length;me++){
-
-    
- document.getElementsByClassName('booked')[okay].innerHTML='bookd'
- document.getElementsByClassName('booked')[okay].style.display='block'
- for(j=0;j<document.getElementsByClassName('booked').length;j++){
- document.getElementById('number').innerHTML=j
-
- let what =document.getElementById('what')
- //i just wanna add only the item ppl  click it adding all
- let fcart=document.getElementsByClassName('fCartlist')[okay]
- what.appendChild(fcart)
-
-      } 
-     }
+//get all myour cart
+let book=buk=(num)=>{
+    if(  localStorage.getItem('amounts')===null){
+      let amounts=[]
+      
+      let cartAmount=document.getElementsByClassName('prize')[num].innerHTML;
+      let cartImg=document.getElementsByTagName('img')[num]
+      let all={
+          amount:cartAmount,
+          img:cartImg
+      }
+     amounts.push(all)
+      localStorage.setItem('amounts',JSON.stringify(amounts))
+      
+      console.log(document.getElementsByTagName('img')[num])
+      console.log(document.getElementsByClassName('prize')[num].innerHTML)
+       }else{
+        let amounts = JSON.parse(localStorage.getItem('amounts'))
+        let cartAmount=document.getElementsByClassName('prize')[num].innerHTML;
+        let cartImg=document.getElementsByTagName('img')[num]
+        let all={
+            amount:cartAmount,
+            img:cartImg}
+      amounts.push(all)
+      localStorage.setItem('amounts',JSON.stringify(amounts))
+      console.log(document.getElementsByTagName('img')[num])
+      console.log(document.getElementsByClassName('prize')[num].innerHTML)
+      console.log(localStorage.getItem('amounts').length)
+       }
+       
 }
+
+let fetchCart=()=>{
+    amounts=JSON.parse(localStorage.getItem('amounts'))
+     
+            let Total =document.getElementById('what')
+            for(i=0;i<amounts.length;i++){
+        let amount=  amounts[i].amount;
+        let imgs=amounts[i].img;
+    Total.innerHTML +='<div class="fCartlists col-3">'+
+                     imgs +
+
+                     '<p class="prize">'+amount+'</p>'+
+                     '</div>'  
+                     console.log(amounts)
+                       } 
+                      
+                      
+                   
+    }
+    
 
 
 document.getElementsByClassName('cart')[0].onclick=()=>{
