@@ -12,6 +12,12 @@ display:flex;}
 .col-10{width:83.333%;}
 .col-11{width:91.66%;}
 .col-12{width:100%;}
+form{
+    padding:50px 30% 50px 30%;
+    margin:50px 30% 50px 30%;
+    background: red;
+}
+
 #header{
     background-color: rgb(216, 200, 200);
 }

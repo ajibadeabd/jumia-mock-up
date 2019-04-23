@@ -39,7 +39,7 @@ let book=buk=(num)=>{
       let amounts=[]
       
       let cartAmount=document.getElementsByClassName('prize')[num].innerHTML;
-      let cartImg=document.getElementsByTagName('img')[num]
+      let cartImg=document.getElementsByTagName('img')[num].src
       let all={
           amount:cartAmount,
           img:cartImg
@@ -47,18 +47,18 @@ let book=buk=(num)=>{
      amounts.push(all)
       localStorage.setItem('amounts',JSON.stringify(amounts))
       
-      console.log(document.getElementsByTagName('img')[num])
+      console.log(document.getElementsByTagName('img')[num].src)
       console.log(document.getElementsByClassName('prize')[num].innerHTML)
        }else{
         let amounts = JSON.parse(localStorage.getItem('amounts'))
         let cartAmount=document.getElementsByClassName('prize')[num].innerHTML;
-        let cartImg=document.getElementsByTagName('img')[num]
+        let cartImg=document.getElementsByTagName('img')[num].src
         let all={
             amount:cartAmount,
             img:cartImg}
       amounts.push(all)
       localStorage.setItem('amounts',JSON.stringify(amounts))
-      console.log(document.getElementsByTagName('img')[num])
+      console.log(document.getElementsByTagName('img')[num].src)
       console.log(document.getElementsByClassName('prize')[num].innerHTML)
       console.log(localStorage.getItem('amounts').length)
        }
@@ -73,11 +73,11 @@ let fetchCart=()=>{
         let amount=  amounts[i].amount;
         let imgs=amounts[i].img;
     Total.innerHTML +='<div class="fCartlists col-3">'+
-                     imgs +
+                     '<img src="'+imgs+'"/>'+
 
                      '<p class="prize">'+amount+'</p>'+
                      '</div>'  
-                     console.log(amounts)
+                     console.log(imgs)
                        } 
                       
                       
