@@ -1,4 +1,11 @@
-<body  onload="fetchCart()">
-<div id='what'></div>
-<div  id='total'></div>
+<body  onload="fetchCart()" >
+    {{#if user}}
+    <div ><a href='/register'> get your order</a></div>
+    <div ><a href='/register'>call for order</a></div>
+    {{else}}
+      <div ><a href='/register'>register</a></div>
+    <div  id='totalLength'></div>
+
+{{/if}}
+<div id='totalCart'></div>
 </body>

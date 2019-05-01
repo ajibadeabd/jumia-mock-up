@@ -12,10 +12,29 @@ display:flex;}
 .col-10{width:83.333%;}
 .col-11{width:91.66%;}
 .col-12{width:100%;}
+#totalCart{
+    text-align: center;
+    font-style: italic;
+    font-language-override: initial;
+    font-stretch: semi-expanded;
+    padding-top: 10px;
+    margin:0px 300px 0px 700px;
+
+}
+.error{
+    background: lightgreen;
+    margin:0px 300px 0px 300px;
+    text-align: center;
+    height: 50px;
+    font-style: italic;
+    font-language-override: initial;
+    font-stretch: semi-expanded;
+    padding-top: 10px;
+}
 form{
-    padding:50px 30% 50px 30%;
-    margin:50px 30% 50px 30%;
-    background: red;
+    padding:10px 20px 30px 100px;
+    margin:50px 600px 0px 600px;
+    background: rgb(13, 185, 185);
 }
 
 #header{

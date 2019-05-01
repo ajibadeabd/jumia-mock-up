@@ -1,21 +1,26 @@
-const {mongoose} = require('../config/mongoose');
+const mongoose = require('mongoose');
+
 const cartSchema = new mongoose.Schema({
-full_name: {
+userName: {
     type: String,
     required: true,
 },
 email: {
     type: String,
     required: true,
+    unique:true
+},
+user: {
+    type: String,
+    require:true
+   
 },
 amount: {
     type: Number,
     required: true,
 },
-reference: {
-    type: String,
-    required: true
-}
+
+
 });
-const Donor = mongoose.model('Donor', donorSchema);
-module.exports = {Donor}
+const Cart = mongoose.model('Cart', cartSchema);
+module.exports = Cart;

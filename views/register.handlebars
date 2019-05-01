@@ -1,9 +1,18 @@
 <form action='register' method="POST">
-    <input type='name' placeholder="username"/>
+    <input type='text' name='userName'  placeholder="username"/>
     <br/> <br/> <br/> <br/>
-    <input type='email' placeholder="email"/>
+    <input type='email'  name='email' value='{{email}}' placeholder="email"/>
     <br/> <br/> <br/> <br/>
-    <input type="password" placeholder="password"/>
+    <input type="password" name='password' value='{{password}}' placeholder="password"/>
     <br/> <br/> <br/> <br/>
+   <input type="password" name='conPassword' value='{{conPassword}}' placeholder="confirmPassword"/>
+    <br/> <br/> <br/> <br/>
+     <input type="number" name='number'value='{{phone}}' placeholder="number"/>
+    <br/> <br/> <br/> <br/>
+    
     <input type='submit' value='register'/>
+  
+
 </form>
+  <div>if registerd pls log in</div>
+  <div><a href="/login">login</a></div>

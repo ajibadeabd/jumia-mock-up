@@ -60,27 +60,73 @@ let book=buk=(num)=>{
       localStorage.setItem('amounts',JSON.stringify(amounts))
       console.log(document.getElementsByTagName('img')[num].src)
       console.log(document.getElementsByClassName('prize')[num].innerHTML)
-      console.log(localStorage.getItem('amounts').length)
+      
        }
        
+        
 }
+
+let =imageChanger=()=>{
+    let arrayOfImages=['2.jpg','mw5.jpg','4.jpg','lp.jpg','hijab.jpg',
+    'foot.jpg','mw1.jpg','mw2.jpg','mw3.jpg','tv.jpg']
+  changing=  document.getElementById('changing')
+  let index=0
+  function autoSlide(){
+    changing.setAttribute('src',arrayOfImages[index])
+    if(index<9){
+        index++
+    }else{
+        index=0
+    }
+  }
+  
+setInterval(autoSlide,1600)
+
+  
+}
+imageChanger()
+
+
+
+//get lenght of local storage
+let total=()=>{
+    let amounts = JSON.parse(localStorage.getItem('amounts'))
+    for(i=0;i<amounts.length;i++){
+       let number= document.getElementById('number')
+       number.innerHTML=i
+    //    let arrayOfImages=['2.jpg','3.jpg']
+    //    changing=  document.getElementById('changing')
+    //    changing.setAttribute('src',arrayOfImages[1])
+    //    setInterval(imageChanger,1000)
+    }}
+
+setInterval(total,100)
+
+//fetch cart from local stotage
 
 let fetchCart=()=>{
     amounts=JSON.parse(localStorage.getItem('amounts'))
      
-            let Total =document.getElementById('what')
+            let TotalCart =document.getElementById('totalCart')
             for(i=0;i<amounts.length;i++){
         let amount=  amounts[i].amount;
         let imgs=amounts[i].img;
-    Total.innerHTML +='<div class="fCartlists col-3">'+
+    TotalCart.innerHTML +='<div class="fCartlists col-3">'+
                      '<img src="'+imgs+'"/>'+
 
                      '<p class="prize">'+amount+'</p>'+
                      '</div>'  
                      console.log(imgs)
+                     let totalLength=document.getElementById("totalLength");
+                     totalLength.innerHTML=i
+                     
+
+                     console.log(i)
+                    
                        } 
                       
-                      
+                     
+                           
                    
     }
     
